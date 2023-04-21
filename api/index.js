@@ -11,7 +11,6 @@ app.use(cors());
 
 app.get('/api/animals', async (req, res) => {
   const pairsCount = req.query.pairs_count || 6;
-  console.log(pairsCount)
 
   try {
     const response = await axios.get(`https://fed-team.modyo.cloud/api/content/spaces/animals/types/game/entries?per_page=${pairsCount}`);
